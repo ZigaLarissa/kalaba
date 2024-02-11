@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:ka_laba/welcome-login-page.dart';
+import 'package:ka_laba/options.dart';
+import 'package:ka_laba/quit-page.dart';
 
 // PAUSE PAGE
 
@@ -95,7 +97,7 @@ class PausePage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => LoginPage()));
+                                builder: (context) => OptionsPage()));
                       },
                       style: TextButton.styleFrom(
                         padding: EdgeInsets.zero,
@@ -118,7 +120,7 @@ class PausePage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => LoginPage()));
+                                builder: (context) => QuitPage()));
                       },
                       style: TextButton.styleFrom(
                         padding: EdgeInsets.zero,
