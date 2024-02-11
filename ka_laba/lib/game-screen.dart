@@ -16,32 +16,61 @@ class GameScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
+                alignment: Alignment.center,
+                height: 95,
+                width: 272,
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.black, width: 1)),
-                child: Column(children: [
-                  Text(
-                    'Kalaba',
-                    style: TextStyle(fontSize: 40),
-                  ),
-                  Text('pause')
-                ]),
-              ),
-              Image.asset(
-                'assets/images/gameplay.jpeg',
-                width: 321,
-                height: 368,
-              ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => PausePage()));
-                },
-                child: Image.asset(
-                  'assets/images/pause-icon.jpeg',
-                  height: 24,
-                  width: 24,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text(
+                      'Kalaba',
+                      style: TextStyle(fontSize: 40),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PausePage()));
+                      },
+                      style: TextButton.styleFrom(
+                        padding: EdgeInsets.zero,
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        backgroundColor: Colors.transparent,
+                        elevation: 0,
+                      ),
+                      child: Text(
+                        'pause',
+                        style: TextStyle(
+                          decoration: TextDecoration.none,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              )
+              ),
+
+              // GAME SCREEN
+              Container(
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(40),
+                height: 377,
+                width: 272,
+                decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black, width: 1)),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text('game screen'),
+                    Text('placeholder'),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

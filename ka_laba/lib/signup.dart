@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:ka_laba/menu.dart';
 import 'package:ka_laba/welcome-login-page.dart';
 
-// LOGIN PAGE
+// SIGNUP PAGE
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
