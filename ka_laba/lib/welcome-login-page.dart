@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ka_laba/menu.dart';
+import 'package:ka_laba/signup.dart';
 
 // LOGIN PAGE
 
@@ -78,11 +79,17 @@ class LoginPage extends StatelessWidget {
                         ),
                         child: Text(
                           'login',
-                          style:
-                              TextStyle(decoration: TextDecoration.underline),
+                          style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              color: Colors.black),
                         )),
                     ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SignUpPage()));
+                        },
                         style: TextButton.styleFrom(
                           padding: EdgeInsets.zero,
                           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -91,8 +98,9 @@ class LoginPage extends StatelessWidget {
                         ),
                         child: Text(
                           'signup instead',
-                          style:
-                              TextStyle(decoration: TextDecoration.underline),
+                          style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              color: Colors.blue),
                         ))
                   ]),
             )

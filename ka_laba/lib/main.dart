@@ -4,7 +4,13 @@ import 'package:flutter/material.dart';
 import 'welcome-login-page.dart';
 
 void main() {
-  runApp(const KalabaApp());
+  runApp(
+    MaterialApp(
+      // Remove the debug banner
+      debugShowCheckedModeBanner: false,
+      home: const KalabaApp(),
+    ),
+  );
 }
 
 class KalabaApp extends StatelessWidget {
