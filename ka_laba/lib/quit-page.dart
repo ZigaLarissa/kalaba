@@ -38,7 +38,7 @@ class QuitPage extends StatelessWidget {
             Container(
               alignment: Alignment.center,
               padding: EdgeInsets.all(40),
-              height: 377,
+              height: 37,
               width: 272,
               decoration: BoxDecoration(
                   border: Border.all(color: Colors.black, width: 1.0)),
