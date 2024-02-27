@@ -3,11 +3,16 @@
 import 'package:flutter/material.dart';
 import 'package:ka_laba/menu.dart';
 import 'package:ka_laba/signup.dart';
+import 'package:ka_laba/components/my_textfield.dart';
 
 // LOGIN PAGE
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  LoginPage({super.key});
+
+  // text editing controllers
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -47,23 +52,21 @@ class LoginPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text('name?'),
-                    SizedBox(
-                      height: 39,
-                      width: 161,
-                      child: TextField(
-                        decoration:
-                            InputDecoration(border: OutlineInputBorder()),
+                      MyTextField(
+                        controller: usernameController,
+                        hintText: 'name',
+                        obscureText: false,
                       ),
-                    ),
+
+                    SizedBox(height: 20),
+                    
                     Text('secret word?'),
-                    SizedBox(
-                      height: 39,
-                      width: 161,
-                      child: TextField(
-                        decoration:
-                            InputDecoration(border: OutlineInputBorder()),
-                      ),
-                    ),
+                   
+                    MyTextField(
+                        controller: passwordController,
+                        hintText: 'secret word',
+                        obscureText: true,
+                   ),
                     ElevatedButton(
                         onPressed: () {
                           Navigator.push(
