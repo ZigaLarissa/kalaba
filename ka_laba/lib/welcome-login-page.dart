@@ -14,6 +14,14 @@ class LoginPage extends StatelessWidget {
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
+  void signUserIn() async {
+    // sign in user
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: usernameController.text,
+      password: passwordController.text,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -52,21 +60,18 @@ class LoginPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text('name?'),
-                      MyTextField(
-                        controller: usernameController,
-                        hintText: 'name',
-                        obscureText: false,
-                      ),
-
-                    SizedBox(height: 20),
-                    
-                    Text('secret word?'),
-                   
                     MyTextField(
-                        controller: passwordController,
-                        hintText: 'secret word',
-                        obscureText: true,
-                   ),
+                      controller: usernameController,
+                      hintText: 'name',
+                      obscureText: false,
+                    ),
+                    SizedBox(height: 20),
+                    Text('secret word?'),
+                    MyTextField(
+                      controller: passwordController,
+                      hintText: 'secret word',
+                      obscureText: true,
+                    ),
                     ElevatedButton(
                         onPressed: () {
                           Navigator.push(

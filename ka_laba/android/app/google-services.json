@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "708536648106",
+    "project_id": "kalaba-9003a",
+    "storage_bucket": "kalaba-9003a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708536648106:android:4be4eeef0824923e992bd3",
+        "android_client_info": {
+          "package_name": "com.ziga.ka_laba"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDNh0O2kqSktLLgCnD7Pimh7QSzi1CttU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
